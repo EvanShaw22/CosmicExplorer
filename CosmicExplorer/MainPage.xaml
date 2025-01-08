@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicExplorer.MainPage"
+             Title="Cosmic Explorer"
+             BackgroundImageSource="space_background.jpg">
+                
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light=settings.png, Dark=settingsdark.png}" Clicked="Settings_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="MainLayout" VerticalOptions="Start">
+            
+            
+            <Grid BackgroundColor="DarkCyan" Padding="20, 20, 20, 20">
+                <Label x:Name="scoreDisplay" HorizontalOptions="Start"  Text="COSMIC EXPLORER" TextColor="White"/>
+                <Label x:Name="fuelDisplay" HorizontalOptions="End"  Text="Fuel: percentage" TextColor="White"/>
+            </Grid>
+            
+            <AbsoluteLayout x:Name="GameLayout" WidthRequest="1000" HeightRequest="400">
+
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </AbsoluteLayout.GestureRecognizers>
+
+                <Grid x:Name="GridPageContent"
+    
+                     HeightRequest="400" 
+                     WidthRequest="1000"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     RowSpacing="3" ColumnSpacing="3" Padding="12">
+
+                </Grid>
+            </AbsoluteLayout>
+            
+
+
+
+            <Button
+                x:Name="StartBtn"
+                Text="Start Game" 
+                Clicked="OnStartClicked"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="planetDisplay" HorizontalOptions="StartAndExpand" Text="plsnsj" TextColor="Gold"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

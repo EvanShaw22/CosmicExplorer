@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicExplorer.SettingsPage"
+             Title="Settings"
+             BackgroundImageSource="space_background.jpg">
+    <StackLayout Padding="20" Spacing="10">
+        <!-- Labels for displaying planet info -->
+        <Label Text="Planets Uncovered: "
+           x:Name="uncovered"
+           FontSize="20"
+           TextColor="Yellow"
+           FontFamily="Consolas"
+           Margin="10" />
+        <Label Text="Reset game progress (This sets the amount of uncovered planets back to 0):"
+           FontSize="18"
+           TextColor="Gray"
+           Margin="10" />
+        <Button Text="RESET"
+           x:Name="ResetButton"
+           FontSize="16"
+           TextColor="White"
+           BackgroundColor="Red"
+           Margin="10"
+           Clicked="OnResetClicked" />
+    </StackLayout>
+</ContentPage>
